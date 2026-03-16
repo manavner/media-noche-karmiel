@@ -11,6 +11,8 @@ const NAV_LINKS = [
   { href: '/contact',    label: 'צור קשר'  },
 ];
 
+const CATALOG_URL = 'https://salsa-steps-web-kgww.vercel.app/';
+
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -22,7 +24,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop */}
-        <ul className="hidden md:flex gap-6 text-sm">
+        <ul className="hidden md:flex gap-6 text-sm items-center">
           {NAV_LINKS.map(l => (
             <li key={l.href}>
               <Link href={l.href} className="hover:text-gold transition-colors">
@@ -30,6 +32,16 @@ export function Navbar() {
               </Link>
             </li>
           ))}
+          <li>
+            <a
+              href={CATALOG_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-dark-card border border-gold text-gold hover:bg-gold hover:text-dark px-3 py-1.5 rounded-lg text-xs font-bold transition-all"
+            >
+              קטלוג צעדים 💃
+            </a>
+          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -55,6 +67,15 @@ export function Navbar() {
               {l.label}
             </Link>
           ))}
+          <a
+            href={CATALOG_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block py-3 text-gold font-bold hover:text-gold/80 transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            קטלוג צעדים 💃
+          </a>
         </div>
       )}
     </nav>

@@ -22,19 +22,27 @@ export function HeroSection() {
         <p className="font-body text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
           {mockSiteSettings.tagline}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/register"
-            className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
-          >
-            הצטרף אלינו 💃
-          </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
           <Link
             href="/classes"
+            className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
+          >
+            פרטים על השיעורים 💃
+          </Link>
+          <Link
+            href="/curriculum"
             className="border-2 border-gold text-gold hover:bg-gold hover:text-dark px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
-            לשיעורים שלנו
+            סילבוס הצעדים
           </Link>
+          <a
+            href="https://salsa-steps-web-kgww.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-dark-card border-2 border-gold/50 text-white/80 hover:border-gold hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
+          >
+            קטלוג צעדי סלסה 🎵
+          </a>
         </div>
 
         {/* Scroll indicator */}

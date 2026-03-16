@@ -22,9 +22,29 @@ export default function CurriculumPage() {
     <main className="section-light min-h-screen">
       <div className="container-rtl py-16">
         <h1 className="font-display text-4xl font-bold text-primary mb-2">סילבוס הצעדים</h1>
-        <p className="text-gray-600 font-body mb-10">
+        <p className="text-gray-600 font-body mb-6">
           תוכנית הלימודים המלאה — מבסיס לחלוטין ועד רמת מאסטר. כל צעד עם סרטון הדרכה.
         </p>
+
+        {/* בנר קטלוג צעדים חיצוני */}
+        <div className="bg-dark text-white rounded-xl p-6 mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="font-display text-lg font-bold text-gold mb-1">
+              רוצה לראות את כל הצעדים עם סרטונים?
+            </p>
+            <p className="text-white/70 text-sm font-body">
+              בקר בקטלוג הצעדים שלנו — חיפוש, סינון לפי רמה, וסרטון לכל צעד
+            </p>
+          </div>
+          <a
+            href="https://salsa-steps-web-kgww.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 bg-gold text-dark hover:bg-gold/80 px-6 py-3 rounded-lg font-bold text-sm transition-all hover:scale-105 whitespace-nowrap"
+          >
+            לקטלוג הצעדים ←
+          </a>
+        </div>
 
         <div className="space-y-6">
           {mockCurriculum.map(level => (
