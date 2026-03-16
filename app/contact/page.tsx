@@ -36,34 +36,17 @@ export default function ContactPage() {
               <li className="flex items-start gap-4">
                 <span className="text-2xl">📍</span>
                 <div>
-                  <p className="font-bold text-dark text-sm mb-1">כתובת</p>
-                  <p className="text-gray-600 text-sm">{mockSiteSettings.address}</p>
+                  <p className="font-bold text-dark text-sm mb-1">מיקום</p>
+                  <p className="text-gray-600 text-sm">{mockSiteSettings.location}</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <span className="text-2xl">📞</span>
+                <span className="text-2xl">📅</span>
                 <div>
-                  <p className="font-bold text-dark text-sm mb-1">טלפון</p>
-                  <a
-                    href={`tel:${mockSiteSettings.phone}`}
-                    className="text-primary text-sm hover:underline"
-                    dir="ltr"
-                  >
-                    {mockSiteSettings.phone}
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-2xl">✉️</span>
-                <div>
-                  <p className="font-bold text-dark text-sm mb-1">אימייל</p>
-                  <a
-                    href={`mailto:${mockSiteSettings.email}`}
-                    className="text-primary text-sm hover:underline"
-                    dir="ltr"
-                  >
-                    {mockSiteSettings.email}
-                  </a>
+                  <p className="font-bold text-dark text-sm mb-1">מתי?</p>
+                  <p className="text-gray-600 text-sm">
+                    {mockSiteSettings.activityDay} | {mockSiteSettings.activityHours}
+                  </p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -97,7 +80,7 @@ export default function ContactPage() {
             </ul>
 
             {/* Map */}
-            <MapEmbedPlaceholder address={mockSiteSettings.address} />
+            <MapEmbedPlaceholder address={mockSiteSettings.location} />
           </div>
 
           {/* Contact Form */}

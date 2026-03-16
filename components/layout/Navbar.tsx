@@ -4,10 +4,11 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
-  { href: '/',        label: 'בית'     },
-  { href: '/about',   label: 'אודות'   },
-  { href: '/classes', label: 'שיעורים' },
-  { href: '/contact', label: 'צור קשר' },
+  { href: '/',           label: 'בית'      },
+  { href: '/about',      label: 'אודות'    },
+  { href: '/classes',    label: 'שיעורים'  },
+  { href: '/curriculum', label: 'סילבוס'   },
+  { href: '/contact',    label: 'צור קשר'  },
 ];
 
 export function Navbar() {
@@ -17,7 +18,7 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-dark text-white shadow-lg">
       <div className="container-rtl flex items-center justify-between h-16">
         <Link href="/" className="font-display text-xl font-bold text-gold">
-          מדיה נוצ'ה כרמיאל
+          מדיה נוצ&apos;ה כרמיאל
         </Link>
 
         {/* Desktop */}
@@ -30,13 +31,6 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-
-        <Link
-          href="/register"
-          className="hidden md:block bg-primary hover:bg-primary-dark px-4 py-2 rounded-lg text-sm font-bold transition-colors"
-        >
-          הרשמה
-        </Link>
 
         {/* Mobile toggle */}
         <button
@@ -51,7 +45,7 @@ export function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-dark-card px-4 pb-4">
-          {[...NAV_LINKS, { href: '/register', label: 'הרשמה' }].map(l => (
+          {NAV_LINKS.map(l => (
             <Link
               key={l.href}
               href={l.href}

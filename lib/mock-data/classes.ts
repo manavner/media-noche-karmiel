@@ -1,5 +1,21 @@
 // TODO(PRD2): Replace mockClassesData with Supabase-backed classes query
-import type { SalsaClass } from '@/types';
+// NOTE: SalsaClass type defined locally — was removed from @/types in PRD1 v2
+export interface SalsaClass {
+  id:             string;
+  title:          string;
+  description:    string;
+  level:          'beginner' | 'intermediate' | 'advanced' | 'all';
+  style:          'on1' | 'on2' | 'cuban' | 'rueda' | 'bachata' | 'styling';
+  dayOfWeek:      0|1|2|3|4|5|6;
+  timeStart:      string;
+  timeEnd:        string;
+  instructor:     string;
+  location:       string;
+  price:          number;
+  trialAvailable: boolean;
+  maxStudents:    number;
+  isActive:       boolean;
+}
 
 export const mockClassesData: SalsaClass[] = [
   {

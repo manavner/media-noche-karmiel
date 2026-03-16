@@ -15,30 +15,42 @@ export function Footer() {
             <p className="text-white/60 text-sm leading-relaxed">
               {mockSiteSettings.tagline}
             </p>
+            <p className="text-community text-sm mt-2 font-bold">
+              🆓 כניסה חינם — תרומות בלבד
+            </p>
           </div>
 
           {/* Links */}
           <div>
             <h4 className="font-bold text-white mb-3">ניווט מהיר</h4>
             <ul className="space-y-2 text-sm text-white/60">
-              <li><Link href="/"        className="hover:text-gold transition-colors">בית</Link></li>
-              <li><Link href="/about"   className="hover:text-gold transition-colors">אודות</Link></li>
-              <li><Link href="/classes" className="hover:text-gold transition-colors">שיעורים</Link></li>
-              <li><Link href="/contact" className="hover:text-gold transition-colors">צור קשר</Link></li>
-              <li><Link href="/register" className="hover:text-gold transition-colors">הרשמה</Link></li>
+              <li><Link href="/"           className="hover:text-gold transition-colors">בית</Link></li>
+              <li><Link href="/about"      className="hover:text-gold transition-colors">אודות</Link></li>
+              <li><Link href="/classes"    className="hover:text-gold transition-colors">שיעורים</Link></li>
+              <li><Link href="/curriculum" className="hover:text-gold transition-colors">סילבוס</Link></li>
+              <li><Link href="/contact"    className="hover:text-gold transition-colors">צור קשר</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-white mb-3">צור קשר</h4>
+            <h4 className="font-bold text-white mb-3">פרטים</h4>
             <ul className="space-y-2 text-sm text-white/60">
-              <li>📍 {mockSiteSettings.address}</li>
-              <li>📞 {mockSiteSettings.phone}</li>
-              <li>✉️ {mockSiteSettings.email}</li>
+              <li>📍 {mockSiteSettings.location}</li>
+              <li>📅 {mockSiteSettings.activityDay} | {mockSiteSettings.activityHours}</li>
               <li>
                 <a
-                  href={`https://instagram.com/${mockSiteSettings.instagram.replace('@','')}`}
+                  href={`https://wa.me/${mockSiteSettings.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  💬 WhatsApp
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`https://instagram.com/${mockSiteSettings.instagram.replace('@', '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gold transition-colors"

@@ -1,4 +1,4 @@
-import type { SalsaClass } from '@/types';
+import type { SalsaClass } from '@/lib/mock-data/classes';
 import Link from 'next/link';
 
 const LEVEL_LABELS: Record<string, string> = {

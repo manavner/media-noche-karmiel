@@ -1,20 +1,17 @@
-import { HeroSection }               from '@/components/home/HeroSection';
-import { QuickStatsBar }             from '@/components/home/QuickStatsBar';
-import { UpcomingClassesPreview }    from '@/components/home/UpcomingClassesPreview';
-import { WeeklyStepWidget }          from '@/components/home/WeeklyStepWidget';
-import { TestimonialsCarousel }      from '@/components/home/TestimonialsCarousel';
-import { GalleryPreviewPlaceholder } from '@/components/home/GalleryPreviewPlaceholder';
-import { mockClassesData }           from '@/lib/mock-data/classes';
+import { HeroSection }        from '@/components/home/HeroSection';
+import { PhilosophySection }  from '@/components/home/PhilosophySection';
+import { QuickStatsBar }      from '@/components/home/QuickStatsBar';
+import { WeeklyStepWidget }   from '@/components/home/WeeklyStepWidget';
+import { TestimonialsCarousel } from '@/components/home/TestimonialsCarousel';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <PhilosophySection />
       <QuickStatsBar />
-      <UpcomingClassesPreview classes={mockClassesData.slice(0, 3)} />
       <WeeklyStepWidget />
       <TestimonialsCarousel />
-      <GalleryPreviewPlaceholder />
     </>
   );
 }

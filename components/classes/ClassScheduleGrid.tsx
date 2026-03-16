@@ -1,7 +1,8 @@
 'use client';
 // TODO(PRD2): Replace mockClassesData with Supabase-backed classes query
 import { useState } from 'react';
-import type { SalsaClass, DanceLevel } from '@/types';
+import type { SalsaClass } from '@/lib/mock-data/classes';
+import type { DanceLevel } from '@/types';
 import { ClassCard } from '@/components/classes/ClassCard';
 import { ClassFilter } from '@/components/classes/ClassFilter';
 

@@ -1,5 +1,13 @@
 // TODO(PRD3): Replace mockInstructorsData with Sanity CMS instructor documents
-import type { Instructor } from '@/types';
+// NOTE: Instructor type defined locally — was removed from @/types in PRD1 v2
+export interface Instructor {
+  id:          string;
+  name:        string;
+  bio:         string;
+  specialties: string[];
+  imageUrl:    string;
+  instagram?:  string;
+}
 
 export const mockInstructorsData: Instructor[] = [
   {

@@ -1,5 +1,5 @@
 // TODO(PRD3): Replace mockInstructorsData with Sanity CMS instructor documents
-import type { Instructor } from '@/types';
+import type { Instructor } from '@/lib/mock-data/instructors';
 import Image from 'next/image';
 
 export function InstructorCard({ instructor }: { instructor: Instructor }) {

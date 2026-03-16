@@ -1,6 +1,6 @@
 // TODO(PRD2): Replace mockClassesData prop with Supabase-backed upcoming classes query
 import Link from 'next/link';
-import type { SalsaClass } from '@/types';
+import type { SalsaClass } from '@/lib/mock-data/classes';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 const DAY_LABELS = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'];

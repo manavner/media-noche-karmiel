@@ -1,114 +1,78 @@
-// types/index.ts
-// Domain Model — יציב בין כל שלבי הפיתוח (Meta-PRD §7)
+// types/index.ts — Domain Model יציב בין כל שלבי הפיתוח
 
-export type DanceLevel = 'beginner' | 'intermediate' | 'advanced' | 'all';
-export type DanceStyle = 'on1' | 'on2' | 'cuban' | 'rueda' | 'bachata' | 'styling';
-export type DayOfWeek  = 0|1|2|3|4|5|6; // 0=ראשון
+export type DanceLevel =
+  | 'basis'           // בסיס
+  | 'elements'        // אלמנטים
+  | 'beginner-tech'   // מתחילים-טכניקה
+  | 'beginner'        // מתחילים
+  | 'intermediate'    // בינוני
+  | 'advanced'        // מתקדמים
+  | 'master';         // מאסטר
 
-export interface SalsaClass {
-  id:             string;
-  title:          string;
-  description:    string;
-  level:          DanceLevel;
-  style:          DanceStyle;
-  dayOfWeek:      DayOfWeek;
-  timeStart:      string;   // '19:00'
-  timeEnd:        string;   // '20:30'
-  instructor:     string;
-  location:       string;
-  price:          number;
-  trialAvailable: boolean;
-  maxStudents:    number;
-  isActive:       boolean;
-}
-
-export interface Registration {
-  id?:           string;
-  firstName:     string;
-  lastName:      string;
-  email:         string;
-  phone:         string;
-  experience:    'none'|'beginner'|'intermediate'|'advanced';
-  desiredLevel:  DanceLevel;
-  preferredDays: DayOfWeek[];
-  classId?:      string;
-  notes?:        string;
-}
-
-export interface SalsaStep {
-  id:            string;
-  nameHe:        string;
-  nameEn:        string;
-  level:         1|2|3|4;
-  styles:        DanceStyle[];
-  description:   string;
-  youtubeId:     string;
-  instructorTip?: string;
-  tags:          string[];
-}
-
-export interface CurriculumLesson {
-  lessonNumber: number;
-  title:        string;
-  topics:       string[];
-  stepIds?:     string[];
-}
-
-export interface CurriculumTrack {
-  id:             string;
-  name:           string;
-  nameEn:         string;
-  level:          DanceLevel;
-  description:    string;
-  forWhom:        string;
-  durationMonths: number;
-  lessonsPerWeek: number;
-  prerequisites:  string[];
-  lessons:        CurriculumLesson[];
-}
-
-export interface SalsaEvent {
+// ── לוח שיעורים ─────────────────────────────
+export interface ClassSession {
   id:          string;
-  title:       string;
+  timeStart:   string;   // '20:00'
+  timeEnd:     string;   // '21:00'
+  level:       DanceLevel;
   description: string;
-  date:        string;
-  timeStart:   string;
-  location:    string;
-  price:       number;
-  imageUrl?:   string;
+  instructor:  string;   // PLACEHOLDER
+  // אין price — המועדון חינם
 }
 
-export interface GalleryItem {
-  id:       string;
-  url:      string;
-  caption?: string;
-  category: 'parties'|'classes'|'performances'|'workshops';
+export interface WednesdaySchedule {
+  date:        string;   // 'כל יום רביעי'
+  sessions:    ClassSession[];
+  partyStart:  string;   // '21:00'
+  partyEnd:    string;   // '23:00'
 }
 
-export interface Testimonial {
-  id:        string;
-  name:      string;
-  text:      string;
-  rating:    1|2|3|4|5;
-  imageUrl?: string;
-}
-
-export interface Instructor {
+// ── צעד בסילבוס ─────────────────────────────
+export interface SalsaStep {
   id:          string;
-  name:        string;
-  bio:         string;
-  specialties: string[];
-  imageUrl:    string;
-  instagram?:  string;
+  nameHe:      string;
+  nameEn:      string;
+  youtubeUrl:  string;   // קישור מלא מהסילבוס
+  level:       DanceLevel;
+  category:    string;   // 'פסטיבל' | 'הומברס' | 'סיבובים' | etc.
 }
 
+// ── רמת לימוד ────────────────────────────────
+export interface CurriculumLevel {
+  id:           DanceLevel;
+  nameHe:       string;
+  prerequisites: string[];
+  categories:   StepCategory[];
+}
+
+export interface StepCategory {
+  id:       string;
+  nameHe:   string;
+  steps:    SalsaStep[];
+}
+
+// ── הגדרות אתר ───────────────────────────────
 export interface SiteSettings {
-  clubName:  string;
-  tagline:   string;
-  phone:     string;
-  email:     string;
-  address:   string;
-  whatsapp:  string;
-  instagram: string;
-  facebook:  string;
+  clubName:        string;
+  tagline:         string;
+  philosophy1:     string;   // "אם לא נעשה לא יהיה"
+  philosophy2:     string;   // "מי שיודע מלמד מי שלא יודע"
+  activityDay:     string;   // "יום רביעי"
+  activityHours:   string;   // "20:00–23:00"
+  classHours:      string;   // "20:00–21:00"
+  partyHours:      string;   // "21:00–23:00"
+  isFree:          boolean;  // true תמיד
+  donationWelcome: boolean;  // true תמיד
+  whatsapp:        string;
+  instagram:       string;
+  facebook:        string;
+  location:        string;
+}
+
+// ── עדות רוקד ────────────────────────────────
+export interface Testimonial {
+  id:      string;
+  name:    string;
+  text:    string;
+  rating:  1|2|3|4|5;
 }
