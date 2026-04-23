@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import { mockSiteSettings } from '@/lib/mock-data/site-settings';
+import { HeroBackground } from './HeroBackground';
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background — TODO: החלף ב-video אמיתי */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-card to-primary-dark" />
-      <div className="absolute inset-0 bg-black/50" />
+      <HeroBackground />
 
       {/* Decorative circles */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
