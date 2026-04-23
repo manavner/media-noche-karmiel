@@ -42,6 +42,14 @@ export function HeroSection() {
           >
             קטלוג צעדי סלסה 🎵
           </a>
+          <a
+            href="https://drive.google.com/drive/folders/1M1dSdN4a4QEFX-ImilAZ6zgwGaLJy8yu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
+          >
+            תמונות 📸
+          </a>
         </div>
 
         {/* Scroll indicator */}
