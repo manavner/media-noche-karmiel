@@ -28,12 +28,14 @@ export function HeroSection() {
           >
             פרטים על השיעורים 💃
           </Link>
-          <Link
-            href="/curriculum"
+          <a
+            href="https://salsaflow-dj.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="border-2 border-gold text-gold hover:bg-gold hover:text-dark px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
-            סילבוס הצעדים
-          </Link>
+            כלים ל DJ 🎧
+          </a>
           <a
             href="https://salsa-steps-web-kgww.vercel.app/"
             target="_blank"
