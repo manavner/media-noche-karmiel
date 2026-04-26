@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import type { GalleryItem } from '@/app/api/gallery-items/route';
 
 export default function GalleryPage() {
@@ -18,6 +20,11 @@ export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-dark pt-24 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
+        <div className="flex justify-center mb-8">
+          <Link href="/" aria-label="חזרה לדף הראשי">
+            <Image src="/logo.png" alt="מדיה נוצ'ה כרמיאל" width={100} height={100} className="rounded-full hover:opacity-80 transition-opacity" />
+          </Link>
+        </div>
         <h1 className="font-display text-4xl md:text-5xl text-white text-center mb-2">
           גלריית תמונות
         </h1>

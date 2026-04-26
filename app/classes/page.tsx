@@ -1,5 +1,7 @@
 // TODO(PRD2): Replace mockWednesdaySchedule with Supabase-backed schedule
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
 import { mockWednesdaySchedule } from '@/lib/mock-data/schedule';
 import { mockSiteSettings }      from '@/lib/mock-data/site-settings';
 
@@ -24,6 +26,11 @@ export default function ClassesPage() {
   return (
     <main className="section-light min-h-screen">
       <div className="container-rtl py-16">
+        <div className="flex justify-center mb-8">
+          <Link href="/" aria-label="חזרה לדף הראשי">
+            <Image src="/logo.png" alt="מדיה נוצ'ה כרמיאל" width={100} height={100} className="rounded-full hover:opacity-80 transition-opacity" />
+          </Link>
+        </div>
         <h1 className="font-display text-4xl font-bold text-primary mb-4">לוח שיעורים</h1>
 
         {/* DonationBanner — חינם */}
