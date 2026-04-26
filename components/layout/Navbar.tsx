@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 const NAV_LINKS = [
@@ -19,8 +20,9 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-dark text-white shadow-lg">
       <div className="container-rtl flex items-center justify-between h-16">
-        <Link href="/" className="font-display text-xl font-bold text-gold">
-          מדיה נוצ&apos;ה כרמיאל
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.png" alt="לוגו מדיה נוצ'ה" width={40} height={40} className="rounded-full" />
+          <span className="font-display text-xl font-bold text-gold">מדיה נוצ&apos;ה כרמיאל</span>
         </Link>
 
         {/* Desktop */}
