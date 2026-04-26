@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { mockSiteSettings } from '@/lib/mock-data/site-settings';
 
 export function Footer() {
@@ -63,22 +62,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-dark-border pt-6 flex items-center justify-between text-white/40 text-xs">
-          <span>© {new Date().getFullYear()} {mockSiteSettings.clubName}. כל הזכויות שמורות.</span>
-          <a
-            href="https://avnerman.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="אתר Avner Man"
-          >
-            <Image
-              src="/avnerman.png"
-              alt="Avner Man"
-              width={36}
-              height={36}
-              className="rounded-full opacity-60 hover:opacity-100 transition-opacity"
-            />
-          </a>
+        <div className="border-t border-dark-border pt-6 text-center text-white/40 text-xs">
+          © {new Date().getFullYear()} {mockSiteSettings.clubName}. כל הזכויות שמורות.
         </div>
       </div>
     </footer>

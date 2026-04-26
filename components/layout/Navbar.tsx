@@ -44,6 +44,16 @@ export function Navbar() {
               קטלוג צעדים 💃
             </a>
           </li>
+          <li>
+            <a
+              href="https://avnerman.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="אתר Avner Man"
+            >
+              <Image src="/avnerman.png" alt="Avner Man" width={32} height={32} className="rounded-full opacity-70 hover:opacity-100 transition-opacity" />
+            </a>
+          </li>
         </ul>
 
         {/* Mobile toggle */}
