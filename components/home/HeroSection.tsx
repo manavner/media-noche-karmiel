@@ -37,7 +37,7 @@ export function HeroSection() {
             כלים ל DJ 🎧
           </a>
           <a
-            href="https://salsa-steps-web-kgww.vercel.app/"
+            href="https://salsa-steps-web.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-dark-card border-2 border-gold/50 text-white/80 hover:border-gold hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
