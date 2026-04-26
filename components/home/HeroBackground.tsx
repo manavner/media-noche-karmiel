@@ -54,7 +54,7 @@ export function HeroBackground() {
       )}
 
       {/* Dark overlay for text legibility */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/40" />
     </>
   );
 }

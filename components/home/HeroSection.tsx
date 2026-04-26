@@ -7,9 +7,9 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <HeroBackground />
 
-      {/* Decorative circles */}
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full bg-gold/10 blur-3xl" />
+      {/* Decorative circles — behind content, only visible on fallback gradient */}
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl -z-10" />
+      <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full bg-gold/10 blur-3xl -z-10" />
 
       <div className="relative z-10 text-center text-white px-4 animate-fade-up">
         <p className="text-gold text-sm font-body uppercase tracking-widest mb-4">
