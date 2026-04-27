@@ -68,13 +68,16 @@ export function Footer() {
 
         <div className="border-t border-dark-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/40 text-xs">
           <span>© {new Date().getFullYear()} {mockSiteSettings.clubName}. כל הזכויות שמורות.</span>
-          <button
+          <a
+            href="https://vercel.com/analytics"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => track('analytics_badge_click')}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-white/10 text-white/40 hover:text-white/70 hover:border-white/30 transition-colors text-xs"
           >
             <BarChart2 size={12} />
             <span>מופעל על ידי Vercel Analytics</span>
-          </button>
+          </a>
         </div>
       </div>
     </footer>
