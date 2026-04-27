@@ -1,11 +1,15 @@
-// TODO(PRD3): Replace mockWeeklyStepData with Sanity CMS weeklyStep query
-import { mockWeeklyStepData } from '@/lib/mock-data/weekly-step';
+// TODO(PRD3): Replace static fallback metadata with Sanity CMS weeklyStep query
+import { getLatestVideoFromFolder } from '@/lib/google-drive';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
-const LEVEL_STARS = ['', '⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐'];
+const LESSONS_FOLDER_ID = '1SR0QLD-u6U2PkKe5DoMucnP_j3MxvVmt';
 
-export function WeeklyStepWidget() {
-  const step = mockWeeklyStepData;
+function extractTitleFromFilename(name: string): string {
+  return name.replace(/\.(mp4|mov|avi|mkv|webm)$/i, '').trim();
+}
+
+export async function WeeklyStepWidget() {
+  const video = await getLatestVideoFromFolder(LESSONS_FOLDER_ID);
 
   return (
     <section className="section-dark py-16">
@@ -17,36 +21,36 @@ export function WeeklyStepWidget() {
         />
 
         <div className="max-w-2xl mx-auto bg-dark-card rounded-2xl overflow-hidden border border-dark-border">
-          {/* Video placeholder — TODO(PRD3): Replace YOUTUBE_ID_HERE with real ID */}
           <div className="relative aspect-video bg-dark flex items-center justify-center">
-            {step.youtubeId === 'YOUTUBE_ID_HERE' ? (
+            {video ? (
+              <iframe
+                src={`https://drive.google.com/file/d/${video.id}/preview`}
+                className="w-full h-full"
+                allow="autoplay"
+                allowFullScreen
+                title={extractTitleFromFilename(video.name)}
+              />
+            ) : (
               <div className="text-center text-white/40">
                 <div className="text-5xl mb-3">▶</div>
                 <p className="text-sm">וידאו יתווסף בקרוב</p>
-                <p className="text-xs mt-1 text-white/20">TODO(PRD3): הכנס YouTube ID</p>
               </div>
-            ) : (
-              <iframe
-                src={`https://www.youtube.com/embed/${step.youtubeId}`}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title={step.title}
-              />
             )}
           </div>
 
           <div className="p-6">
-            <div className="flex justify-between items-start mb-3">
-              <h3 className="font-display text-xl font-bold text-white">{step.title}</h3>
-              <span className="text-sm text-gold">{LEVEL_STARS[step.level]}</span>
-            </div>
-            <p className="text-white/70 text-sm mb-4">{step.description}</p>
-            {step.instructorTip && (
-              <div className="bg-primary/20 border border-primary/30 rounded-lg p-3">
-                <p className="text-gold text-xs font-bold mb-1">💡 טיפ מהמדריך</p>
-                <p className="text-white/80 text-sm">{step.instructorTip}</p>
-              </div>
+            <h3 className="font-display text-xl font-bold text-white mb-2">
+              {video ? extractTitleFromFilename(video.name) : 'צעד השבוע'}
+            </h3>
+            {video && (
+              <p className="text-white/40 text-xs">
+                עודכן לאחרונה:{' '}
+                {new Date(video.modifiedTime).toLocaleDateString('he-IL', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                })}
+              </p>
             )}
           </div>
         </div>

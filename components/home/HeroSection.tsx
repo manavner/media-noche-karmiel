@@ -21,7 +21,7 @@ export function HeroSection() {
         <p className="font-body text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto">
           {mockSiteSettings.tagline}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mt-8">
           <Link
             href="/classes"
             className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
@@ -49,6 +49,28 @@ export function HeroSection() {
             className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
             תמונות 📸
+          </Link>
+          <a
+            href="https://drive.google.com/drive/folders/17j7duBwhICp1NYRjkoioEgCLlsNUF742?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
+          >
+            סרטונים ממסיבות 🎥
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1SR0QLD-u6U2PkKe5DoMucnP_j3MxvVmt?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
+          >
+            סרטונים משיעורים 🎓
+          </a>
+          <Link
+            href="/join"
+            className="bg-community border-2 border-community text-white hover:brightness-110 px-8 py-4 rounded-lg font-bold text-lg transition-all"
+          >
+            הצטרפות לקבוצת חברים 🤝
           </Link>
         </div>
 
