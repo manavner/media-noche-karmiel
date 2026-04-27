@@ -4,6 +4,7 @@ import { Navbar }                 from '@/components/layout/Navbar';
 import { Footer }                 from '@/components/layout/Footer';
 import { WhatsAppFloatingButton } from '@/components/layout/WhatsAppFloatingButton';
 import { mockSiteSettings }       from '@/lib/mock-data/site-settings';
+import { Analytics }              from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <WhatsAppFloatingButton phone={mockSiteSettings.whatsapp} />
+        <Analytics />
       </body>
     </html>
   );

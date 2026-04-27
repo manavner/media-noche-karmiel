@@ -1,4 +1,8 @@
+'use client';
+
 import Link from 'next/link';
+import { track } from '@vercel/analytics';
+import { BarChart2 } from 'lucide-react';
 import { mockSiteSettings } from '@/lib/mock-data/site-settings';
 
 export function Footer() {
@@ -62,8 +66,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-dark-border pt-6 text-center text-white/40 text-xs">
-          © {new Date().getFullYear()} {mockSiteSettings.clubName}. כל הזכויות שמורות.
+        <div className="border-t border-dark-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/40 text-xs">
+          <span>© {new Date().getFullYear()} {mockSiteSettings.clubName}. כל הזכויות שמורות.</span>
+          <button
+            onClick={() => track('analytics_badge_click')}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-white/10 text-white/40 hover:text-white/70 hover:border-white/30 transition-colors text-xs"
+          >
+            <BarChart2 size={12} />
+            <span>מופעל על ידי Vercel Analytics</span>
+          </button>
         </div>
       </div>
     </footer>
