@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 const API_KEY = process.env.GOOGLE_DRIVE_API_KEY;
-const FOLDER_ID = process.env.GALLERY_FOLDER_ID;
+const ROOT_FOLDER_ID = process.env.GALLERY_FOLDER_ID;
 
 export type GalleryItem = {
   id: string;
@@ -9,17 +9,20 @@ export type GalleryItem = {
   type: 'image' | 'video';
 };
 
-export async function GET() {
-  if (!API_KEY || !FOLDER_ID) {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const folderId = searchParams.get('folderId') ?? ROOT_FOLDER_ID;
+
+  if (!API_KEY || !folderId) {
     return NextResponse.json({ items: [] });
   }
 
   try {
     const query = encodeURIComponent(
-      `'${FOLDER_ID}' in parents and (mimeType contains 'image/' or mimeType contains 'video/') and trashed = false`
+      `'${folderId}' in parents and (mimeType contains 'image/' or mimeType contains 'video/') and trashed = false`
     );
     const fields = encodeURIComponent('files(id,name,mimeType)');
-    const url = `https://www.googleapis.com/drive/v3/files?q=${query}&key=${API_KEY}&fields=${fields}&pageSize=100&orderBy=createdTime desc`;
+    const url = `https://www.googleapis.com/drive/v3/files?q=${query}&key=${API_KEY}&fields=${fields}&pageSize=200&orderBy=createdTime desc`;
 
     const res = await fetch(url, { next: { revalidate: 60 } });
     if (!res.ok) return NextResponse.json({ items: [] });
