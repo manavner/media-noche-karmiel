@@ -50,14 +50,12 @@ export function HeroSection() {
           >
             תמונות 📸
           </Link>
-          <a
-            href="https://drive.google.com/drive/folders/1SR0QLD-u6U2PkKe5DoMucnP_j3MxvVmt?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/videos"
             className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
             סרטונים משיעורים 🎓
-          </a>
+          </Link>
           <Link
             href="/join"
             className="bg-community border-2 border-community text-white hover:brightness-110 px-8 py-4 rounded-lg font-bold text-lg transition-all"
