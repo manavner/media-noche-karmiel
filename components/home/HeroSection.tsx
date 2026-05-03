@@ -51,14 +51,6 @@ export function HeroSection() {
             תמונות 📸
           </Link>
           <a
-            href="https://drive.google.com/drive/folders/17j7duBwhICp1NYRjkoioEgCLlsNUF742?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
-          >
-            סרטונים ממסיבות 🎥
-          </a>
-          <a
             href="https://drive.google.com/drive/folders/1SR0QLD-u6U2PkKe5DoMucnP_j3MxvVmt?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
