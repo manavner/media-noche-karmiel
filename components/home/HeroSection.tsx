@@ -48,13 +48,7 @@ export function HeroSection() {
             href="/gallery"
             className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
-            תמונות 📸
-          </Link>
-          <Link
-            href="/videos"
-            className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
-          >
-            סרטונים משיעורים 🎓
+            תמונות וסרטונים 📸
           </Link>
           <Link
             href="/join"
