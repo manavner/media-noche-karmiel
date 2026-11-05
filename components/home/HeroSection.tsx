@@ -8,29 +8,32 @@ const heroFont = Rubik({ subsets: ['hebrew', 'latin'], weight: ['800', '900'] })
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24">
+    <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center overflow-hidden pt-20 pb-24">
       <HeroBackground />
 
       {/* Decorative circles — behind content, only visible on fallback gradient */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full bg-gold/10 blur-3xl -z-10" />
 
-      <div className="relative z-10 text-center text-white px-4 animate-fade-up">
+      {/* Top group (label/title/tagline) high, principles centered, buttons low */}
+      <div className="relative z-10 flex-1 w-full flex flex-col justify-between gap-10 text-center text-white px-4 animate-fade-up">
+        <div>
         <p className="text-gold text-sm font-body uppercase tracking-widest mb-4">
           מועדון סלסה
         </p>
-        <h1 className={`${heroFont.className} text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight`}>
+        <h1 className={`${heroFont.className} text-4xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight`}>
           {mockSiteSettings.clubName}
         </h1>
-        <p className="font-body text-xl md:text-2xl text-white/80 mb-6 max-w-2xl mx-auto">
+        <p className="font-body text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
           {mockSiteSettings.tagline}
         </p>
+        </div>
         {/* העיקרון המוביל שלנו */}
-        <div className="font-body text-gold text-lg md:text-xl font-bold mb-10 space-y-1">
+        <div className="font-body text-gold text-lg md:text-xl font-bold space-y-1">
           <p>&ldquo;מי שיודע מלמד את מי שלא יודע&rdquo;</p>
           <p>&ldquo;אם נעשה יהיה&rdquo;</p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mt-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
           <Link
             href="/curriculum"
             className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
