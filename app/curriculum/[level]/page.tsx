@@ -4,15 +4,21 @@ import { notFound }       from 'next/navigation';
 import Link               from 'next/link';
 import type { Metadata }  from 'next';
 
-export async function generateMetadata(
-  { params }: { params: { level: string } }
-): Promise<Metadata> {
-  const level = mockCurriculum.find(l => l.id === params.level);
-  return { title: `תוכנית הלימודים — ${level?.nameHe ?? params.level}` };
+export function generateStaticParams() {
+  return mockCurriculum.map(l => ({ level: l.id }));
 }
 
-export default function LevelPage({ params }: { params: { level: string } }) {
-  const level = mockCurriculum.find(l => l.id === params.level);
+export async function generateMetadata(
+  { params }: { params: Promise<{ level: string }> }
+): Promise<Metadata> {
+  const { level: levelId } = await params;
+  const level = mockCurriculum.find(l => l.id === levelId);
+  return { title: `תוכנית הלימודים — ${level?.nameHe ?? levelId}` };
+}
+
+export default async function LevelPage({ params }: { params: Promise<{ level: string }> }) {
+  const { level: levelId } = await params;
+  const level = mockCurriculum.find(l => l.id === levelId);
   if (!level) notFound();
 
   return (
