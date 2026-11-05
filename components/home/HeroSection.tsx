@@ -36,7 +36,7 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
           <Link
             href="/curriculum"
-            className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
+            className="bg-[#E6007E] hover:bg-[#C2006A] px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
           >
             תוכנית הלימודים 💃
           </Link>
@@ -58,7 +58,7 @@ export function HeroSection() {
           </a>
           <Link
             href="/gallery"
-            className="bg-dark-card border-2 border-white/30 text-white/80 hover:border-white hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
+            className="bg-[#E6007E] border-2 border-[#E6007E] text-white hover:bg-[#C2006A] hover:border-[#C2006A] px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
             תמונות וסרטונים 📸
           </Link>
