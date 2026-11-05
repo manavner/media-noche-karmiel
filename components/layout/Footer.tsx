@@ -44,7 +44,7 @@ export function Footer() {
               <li>📅 {mockSiteSettings.activityDay} | {mockSiteSettings.activityHours}</li>
               <li>
                 <a
-                  href={`https://wa.me/${mockSiteSettings.whatsapp}`}
+                  href={mockSiteSettings.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gold transition-colors"

@@ -54,12 +54,12 @@ export default function ContactPage() {
                 <div>
                   <p className="font-bold text-dark text-sm mb-1">WhatsApp</p>
                   <a
-                    href={`https://wa.me/${mockSiteSettings.whatsapp}`}
+                    href={mockSiteSettings.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary text-sm hover:underline"
                   >
-                    שלח הודעה ב-WhatsApp
+                    הצטרף לקבוצת ה-WhatsApp
                   </a>
                 </div>
               </li>

@@ -21,7 +21,7 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-dark text-white shadow-lg">
       <div className="container-rtl flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="לוגו מדיה נוצ'ה" width={40} height={40} className="rounded-full" />
+          <Image src="/logo.png" alt="לוגו מדיה נוצ'ה" width={40} height={40} className="object-contain" />
           <span className="font-display text-xl font-bold text-gold">מדיה נוצ&apos;ה כרמיאל</span>
         </Link>
 

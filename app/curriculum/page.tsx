@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { mockCurriculum } from '@/lib/mock-data/curriculum';
 
 export const metadata: Metadata = {
-  title: 'סילבוס — תוכנית הלימודים',
-  description: "סילבוס מלא של מדיה נוצ'ה כרמיאל — מבסיס ועד מאסטר, עם סרטוני הדרכה לכל צעד.",
+  title: 'תוכנית הלימודים',
+  description: "תוכנית הלימודים של מדיה נוצ'ה כרמיאל — חמש רמות, מבסיס ועד מאסטר, עם סרטון הדרכה לכל צעד.",
 };
 
 const LEVEL_COLORS: Record<string, string> = {
@@ -21,9 +21,9 @@ export default function CurriculumPage() {
   return (
     <main className="section-light min-h-screen">
       <div className="container-rtl py-16">
-        <h1 className="font-display text-4xl font-bold text-primary mb-2">סילבוס הצעדים</h1>
+        <h1 className="font-display text-4xl font-bold text-primary mb-2">תוכנית הלימודים</h1>
         <p className="text-gray-600 font-body mb-6">
-          תוכנית הלימודים המלאה — מבסיס לחלוטין ועד רמת מאסטר. כל צעד עם סרטון הדרכה.
+          חמש רמות — בסיס, מתחילים, בינוני, מתקדמים ומאסטר. לחצו על רמה כדי לראות את כל הצעדים, עם סרטון הדרכה לכל צעד.
         </p>
 
         {/* בנר קטלוג צעדים חיצוני */}

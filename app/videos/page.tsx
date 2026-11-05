@@ -73,7 +73,7 @@ export default function VideosPage() {
               alt="מדיה נוצ'ה כרמיאל"
               width={100}
               height={100}
-              className="rounded-full hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity"
             />
           </Link>
         </div>

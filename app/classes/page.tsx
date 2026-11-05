@@ -28,7 +28,7 @@ export default function ClassesPage() {
       <div className="container-rtl py-16">
         <div className="flex justify-center mb-8">
           <Link href="/" aria-label="חזרה לדף הראשי">
-            <Image src="/logo.png" alt="מדיה נוצ'ה כרמיאל" width={100} height={100} className="rounded-full hover:opacity-80 transition-opacity" />
+            <Image src="/logo.png" alt="מדיה נוצ'ה כרמיאל" width={100} height={100} className="hover:opacity-80 transition-opacity" />
           </Link>
         </div>
         <h1 className="font-display text-4xl font-bold text-primary mb-4">לוח שיעורים</h1>

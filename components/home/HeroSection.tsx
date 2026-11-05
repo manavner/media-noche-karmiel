@@ -23,10 +23,10 @@ export function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mt-8">
           <Link
-            href="/classes"
+            href="/curriculum"
             className="bg-primary hover:bg-primary-dark px-8 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105"
           >
-            פרטים על השיעורים 💃
+            תוכנית הלימודים 💃
           </Link>
           <a
             href="https://salsaflow-dj.vercel.app/"

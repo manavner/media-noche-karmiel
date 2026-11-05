@@ -8,7 +8,7 @@ export async function generateMetadata(
   { params }: { params: { level: string } }
 ): Promise<Metadata> {
   const level = mockCurriculum.find(l => l.id === params.level);
-  return { title: `סילבוס — ${level?.nameHe ?? params.level}` };
+  return { title: `תוכנית הלימודים — ${level?.nameHe ?? params.level}` };
 }
 
 export default function LevelPage({ params }: { params: { level: string } }) {
@@ -23,7 +23,7 @@ export default function LevelPage({ params }: { params: { level: string } }) {
             href="/curriculum"
             className="text-sm text-primary hover:underline font-body"
           >
-            ← חזרה לסילבוס
+            ← חזרה לתוכנית הלימודים
           </Link>
         </div>
 
@@ -48,8 +48,11 @@ export default function LevelPage({ params }: { params: { level: string } }) {
                   >
                     <div>
                       <span className="font-body font-medium">{step.nameHe}</span>
-                      <span className="text-gray-400 text-sm font-body mr-2">— {step.nameEn}</span>
+                      {step.nameEn !== step.nameHe && (
+                        <span className="text-gray-400 text-sm font-body mr-2">— {step.nameEn}</span>
+                      )}
                     </div>
+                    {step.youtubeUrl && (
                     <a
                       href={step.youtubeUrl}
                       target="_blank"
@@ -58,6 +61,7 @@ export default function LevelPage({ params }: { params: { level: string } }) {
                     >
                       ▶ YouTube
                     </a>
+                    )}
                   </li>
                 ))}
               </ul>

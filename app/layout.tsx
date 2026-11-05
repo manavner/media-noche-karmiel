@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'מועדון הסלסה המוביל בכרמיאל. שיעורי סלסה לכל הרמות, אירועים ומסיבות.',
   keywords:    ['סלסה כרמיאל', 'ריקוד לטיני', 'מועדון ריקוד', 'salsa karmiel'],
   openGraph:   { type: 'website', locale: 'he_IL', siteName: mockSiteSettings.clubName },
-  icons: { icon: '/logo.png', apple: '/logo.png' },
+  icons: { icon: '/logo.png', apple: '/apple-icon.png' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

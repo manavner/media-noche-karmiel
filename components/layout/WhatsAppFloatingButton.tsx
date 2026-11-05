@@ -3,7 +3,7 @@ interface Props { phone: string; }
 export function WhatsAppFloatingButton({ phone }: Props) {
   return (
     <a
-      href="https://chat.whatsapp.com/EC9GPEqJKQU1KOOdepexbj"
+      href={phone}
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"

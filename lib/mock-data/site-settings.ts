@@ -12,7 +12,7 @@ export const mockSiteSettings: SiteSettings = {
   partyHours:      '21:00–23:00',
   isFree:          true,
   donationWelcome: true,
-  whatsapp:        'WHATSAPP_PLACEHOLDER',  // PLACEHOLDER
+  whatsapp:        'https://chat.whatsapp.com/EC9GPEqJKQU1KOOdepexbj',  // קישור הזמנה לקבוצת WhatsApp
   instagram:       '@INSTAGRAM_HANDLE',    // PLACEHOLDER
   facebook:        'FACEBOOK_URL',         // PLACEHOLDER
   location:        'כרמיאל',              // PLACEHOLDER — כתובת מדויקת
