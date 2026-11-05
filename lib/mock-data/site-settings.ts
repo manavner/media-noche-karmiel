@@ -14,6 +14,6 @@ export const mockSiteSettings: SiteSettings = {
   donationWelcome: true,
   whatsapp:        'https://chat.whatsapp.com/EC9GPEqJKQU1KOOdepexbj',  // קישור הזמנה לקבוצת WhatsApp
   instagram:       '@INSTAGRAM_HANDLE',    // PLACEHOLDER
-  facebook:        'FACEBOOK_URL',         // PLACEHOLDER
+  facebook:        'https://www.facebook.com/share/g/1CDunkgN5j/',  // קבוצת הפייסבוק
   location:        'כרמיאל',              // PLACEHOLDER — כתובת מדויקת
 };

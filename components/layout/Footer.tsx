@@ -54,6 +54,16 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href={mockSiteSettings.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  👍 Facebook
+                </a>
+              </li>
+              <li>
+                <a
                   href={`https://instagram.com/${mockSiteSettings.instagram.replace('@', '')}`}
                   target="_blank"
                   rel="noopener noreferrer"

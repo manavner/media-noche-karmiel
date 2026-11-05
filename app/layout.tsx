@@ -3,7 +3,8 @@ import './globals.css';
 import { Navbar }                 from '@/components/layout/Navbar';
 import { Footer }                 from '@/components/layout/Footer';
 import { WhatsAppFloatingButton } from '@/components/layout/WhatsAppFloatingButton';
-import { mockSiteSettings }       from '@/lib/mock-data/site-settings';
+import { FacebookFloatingButton } from '@/components/layout/FacebookFloatingButton';
+import { mockSiteSettings }     from '@/lib/mock-data/site-settings';
 import { Analytics }              from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <WhatsAppFloatingButton phone={mockSiteSettings.whatsapp} />
+        <FacebookFloatingButton url={mockSiteSettings.facebook} />
         <Analytics />
       </body>
     </html>

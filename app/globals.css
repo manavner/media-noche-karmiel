@@ -212,3 +212,23 @@
 .whatsapp-float:hover {
   transform: scale(1.1);
 }
+
+.facebook-float {
+  position: fixed;
+  bottom: 6rem;
+  left: 1.5rem;
+  z-index: 999;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #1877F2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(24, 119, 242, 0.4);
+  transition: transform 0.2s;
+}
+
+.facebook-float:hover {
+  transform: scale(1.1);
+}

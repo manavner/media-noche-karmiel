@@ -8,7 +8,7 @@ const heroFont = Rubik({ subsets: ['hebrew', 'latin'], weight: ['800', '900'] })
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24">
       <HeroBackground />
 
       {/* Decorative circles — behind content, only visible on fallback gradient */}
@@ -66,12 +66,12 @@ export function HeroSection() {
             הצטרפות לקבוצה 🤝
           </Link>
         </div>
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-white/60 rounded-full" />
-          </div>
+      {/* Scroll indicator — anchored to the section bottom, below the buttons */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+          <div className="w-1 h-2 bg-white/60 rounded-full" />
         </div>
       </div>
     </section>
