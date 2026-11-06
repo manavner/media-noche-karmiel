@@ -8,7 +8,7 @@ const heroFont = Rubik({ subsets: ['hebrew', 'latin'], weight: ['800', '900'] })
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center overflow-hidden pt-20 pb-24">
+    <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center overflow-hidden pt-20 pb-20">
       <HeroBackground />
 
       {/* Decorative circles — behind content, only visible on fallback gradient */}
@@ -18,13 +18,13 @@ export function HeroSection() {
       {/* Top group (label/title/tagline) high, principles centered, buttons low */}
       <div className="relative z-10 flex-1 w-full flex flex-col justify-between gap-10 text-center text-white px-4 animate-fade-up">
         <div>
-        <p className="text-gold text-sm font-body uppercase tracking-widest mb-4">
+        <p className="text-[#01C5C6] text-xl md:text-2xl font-body font-bold tracking-widest mb-4">
           מועדון סלסה
         </p>
-        <h1 className={`${heroFont.className} text-4xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight`}>
+        <h1 className={`${heroFont.className} text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight`}>
           {mockSiteSettings.clubName}
         </h1>
-        <p className="font-body text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
+        <p className="font-body text-2xl md:text-3xl text-[#01C5C6] max-w-3xl mx-auto">
           {mockSiteSettings.tagline}
         </p>
         </div>
@@ -72,7 +72,7 @@ export function HeroSection() {
       </div>
 
       {/* Scroll indicator — anchored to the section bottom, below the buttons */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
           <div className="w-1 h-2 bg-white/60 rounded-full" />
         </div>
