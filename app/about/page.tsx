@@ -3,6 +3,7 @@ import { InstructorCard } from '@/components/about/InstructorCard';
 import { SectionHeader }  from '@/components/ui/SectionHeader';
 import { mockInstructorsData } from '@/lib/mock-data/instructors';
 import Link from 'next/link';
+import { mockSiteSettings } from '@/lib/mock-data/site-settings';
 
 export const metadata: Metadata = {
   title: 'אודות',
@@ -102,14 +103,14 @@ export default function AboutPage() {
       </section>
 
       {/* Instructors */}
-      <section className="section-light py-16">
+      <section id="team" className="section-light py-16 scroll-mt-24">
         <div className="container-rtl">
           <SectionHeader
             title="הצוות שלנו"
             subtitle="המדריכים שיקחו אותך בדרך"
           />
           {/* TODO(PRD3): Replace mockInstructorsData with Sanity CMS instructor documents */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {mockInstructorsData.map(instructor => (
               <InstructorCard key={instructor.id} instructor={instructor} />
             ))}
@@ -120,16 +121,23 @@ export default function AboutPage() {
       {/* CTA */}
       <div className="bg-primary py-12 text-center text-white">
         <div className="container-rtl">
-          <h2 className="font-display text-2xl font-bold mb-3">
-            מוכן להצטרף אלינו?
+          <h2 className="font-display text-2xl md:text-3xl font-bold mb-4">
+            מוכנים להצטרף? בואו למפגש התנסות!
           </h2>
-          <p className="text-white/80 mb-6">שיעור ניסיון ראשון — בחינם, ללא התחייבות.</p>
-          <Link
-            href="/register"
-            className="inline-block bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-light transition-colors"
-          >
-            קבע שיעור ניסיון ←
-          </Link>
+          <div className="space-y-2 text-white/90 text-lg">
+            <p>
+              <a
+                href={mockSiteSettings.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold underline hover:text-white"
+              >
+                הצטרפו לקבוצת הוואצאפ שלנו!
+              </a>
+            </p>
+            <p>אין צורך בידע מוקדם. אפשר להגיע עם בן/בת זוג או בלי (:</p>
+            <p>כל יום רביעי, בית המתנדב 103, כרמיאל</p>
+          </div>
         </div>
       </div>
     </div>

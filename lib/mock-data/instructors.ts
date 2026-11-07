@@ -18,4 +18,12 @@ export const mockInstructorsData: Instructor[] = [
     imageUrl:    '/images/instructor-placeholder.jpg',    // PLACEHOLDER
     instagram:   '@placeholder',                          // PLACEHOLDER
   },
+  // PLACEHOLDER — 3 more instructors, details to be provided by the club
+  ...[2, 3, 4].map(n => ({
+    id:          `instructor-${n}`,
+    name:        'מדריך/ה — פרטים בקרוב',               // PLACEHOLDER
+    bio:         'פרטים על המדריך/ה יתווספו בקרוב.',     // PLACEHOLDER
+    specialties: [],
+    imageUrl:    '/images/instructor-placeholder.jpg',  // PLACEHOLDER
+  })),
 ];

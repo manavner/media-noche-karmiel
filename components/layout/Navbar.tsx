@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 const NAV_LINKS = [
   { href: '/',           label: 'בית'      },
   { href: '/about',      label: 'אודות'    },
+  { href: '/about#team', label: 'הצוות שלנו' },
   { href: '/classes',    label: 'שיעורים'  },
   { href: '/curriculum', label: 'סילבוס'   },
 ];
@@ -17,7 +18,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#01C5C6] text-black shadow-lg border-b-[11px] border-[#FDE003]">
+    <nav className="sticky top-0 z-50 bg-[#01C5C6] text-black shadow-lg">
       <div className="container-rtl flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2" aria-label="מדיה נוצ'ה כרמיאל — דף הבית">
           <Image src="/logo.png" alt="לוגו מדיה נוצ'ה" width={56} height={56} className="object-contain" priority />
@@ -88,6 +89,10 @@ export function Navbar() {
           </a>
         </div>
       )}
+
+      {/* Thin brand stripes under the header: yellow, then pink */}
+      <div aria-hidden="true" className="h-[11px] bg-[#FDE003]" />
+      <div aria-hidden="true" className="h-[11px] bg-[#E6007E]" />
     </nav>
   );
 }
