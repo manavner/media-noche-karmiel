@@ -65,12 +65,6 @@ export function HeroSection() {
           >
             תמונות וסרטונים 📸
           </Link>
-          <Link
-            href="/join"
-            className="bg-white border-2 border-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all"
-          >
-            הצטרפות לקבוצה 🤝
-          </Link>
         </div>
       </div>
 
