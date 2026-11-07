@@ -18,7 +18,7 @@ export function HeroSection() {
       {/* Top: label + title right under the navbar; middle: tagline + principles; bottom: buttons.
           Text shadow keeps text readable now that the photo overlay is lighter. */}
       <div className="relative z-10 flex-1 w-full flex flex-col justify-between gap-10 text-center text-white px-4 animate-fade-up">
-        <div className="[text-shadow:0_2px_10px_rgba(0,0,0,0.75)]">
+        <div className="[text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.8)]">
         <p className="text-[#01C5C6] text-xl md:text-2xl font-body font-bold tracking-widest mb-2">
           מועדון סלסה
         </p>
@@ -26,7 +26,7 @@ export function HeroSection() {
           {mockSiteSettings.clubName}
         </h1>
         </div>
-        <div className="[text-shadow:0_2px_10px_rgba(0,0,0,0.75)]">
+        <div className="[text-shadow:0_1px_3px_rgba(0,0,0,0.9),0_2px_12px_rgba(0,0,0,0.8)]">
           <p className="font-body text-2xl md:text-3xl text-[#01C5C6] max-w-3xl mx-auto mb-4">
             {mockSiteSettings.tagline}
           </p>
