@@ -8,30 +8,33 @@ const heroFont = Rubik({ subsets: ['hebrew', 'latin'], weight: ['800', '900'] })
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center overflow-hidden pt-20 pb-20">
+    <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center overflow-hidden pt-8 pb-20">
       <HeroBackground />
 
       {/* Decorative circles — behind content, only visible on fallback gradient */}
       <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full bg-primary/10 blur-3xl -z-10" />
       <div className="absolute bottom-1/4 left-1/4 w-48 h-48 rounded-full bg-gold/10 blur-3xl -z-10" />
 
-      {/* Top group (label/title/tagline) high, principles centered, buttons low */}
+      {/* Top: label + title right under the navbar; middle: tagline + principles; bottom: buttons.
+          Text shadow keeps text readable now that the photo overlay is lighter. */}
       <div className="relative z-10 flex-1 w-full flex flex-col justify-between gap-10 text-center text-white px-4 animate-fade-up">
-        <div>
-        <p className="text-[#01C5C6] text-xl md:text-2xl font-body font-bold tracking-widest mb-4">
+        <div className="[text-shadow:0_2px_10px_rgba(0,0,0,0.75)]">
+        <p className="text-[#01C5C6] text-xl md:text-2xl font-body font-bold tracking-widest mb-2">
           מועדון סלסה
         </p>
-        <h1 className={`${heroFont.className} text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight`}>
+        <h1 className={`${heroFont.className} text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight`}>
           {mockSiteSettings.clubName}
         </h1>
-        <p className="font-body text-2xl md:text-3xl text-[#01C5C6] max-w-3xl mx-auto">
-          {mockSiteSettings.tagline}
-        </p>
         </div>
-        {/* העיקרון המוביל שלנו */}
-        <div className="font-body text-gold text-lg md:text-xl font-bold space-y-1">
-          <p>&ldquo;מי שיודע מלמד את מי שלא יודע&rdquo;</p>
-          <p>&ldquo;אם נעשה יהיה&rdquo;</p>
+        <div className="[text-shadow:0_2px_10px_rgba(0,0,0,0.75)]">
+          <p className="font-body text-2xl md:text-3xl text-[#01C5C6] max-w-3xl mx-auto mb-4">
+            {mockSiteSettings.tagline}
+          </p>
+          {/* העיקרון המוביל שלנו */}
+          <div className="font-body text-gold text-lg md:text-xl font-bold space-y-1">
+            <p>&ldquo;מי שיודע מלמד את מי שלא יודע&rdquo;</p>
+            <p>&ldquo;אם נעשה יהיה&rdquo;</p>
+          </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
           <Link
