@@ -191,12 +191,29 @@
   }
 }
 
-/* ─── WhatsApp Floating Button ─── */
-.whatsapp-float {
+/* ─── Floating social buttons (Facebook + WhatsApp + caption) ─── */
+.social-float {
   position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
+  bottom: 1rem;
+  left: 1rem;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.social-float-caption {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.whatsapp-float {
   width: 3.5rem;
   height: 3.5rem;
   background: #25D366;
@@ -214,10 +231,6 @@
 }
 
 .facebook-float {
-  position: fixed;
-  bottom: 6rem;
-  left: 1.5rem;
-  z-index: 999;
   width: 3.5rem;
   height: 3.5rem;
   background: #1877F2;

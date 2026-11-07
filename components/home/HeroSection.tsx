@@ -8,7 +8,7 @@ const heroFont = Rubik({ subsets: ['hebrew', 'latin'], weight: ['800', '900'] })
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center overflow-hidden pt-8 pb-20">
+    <section className="relative min-h-[calc(100vh-75px)] flex flex-col items-center overflow-hidden pt-8 pb-20">
       <HeroBackground />
 
       {/* Decorative circles — behind content, only visible on fallback gradient */}

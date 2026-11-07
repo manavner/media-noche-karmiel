@@ -18,7 +18,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#FDE003] text-black shadow-lg">
+    <nav className="sticky top-0 z-50 bg-[#01C5C6] text-black shadow-lg border-b-[11px] border-[#FDE003]">
       <div className="container-rtl flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2" aria-label="מדיה נוצ'ה כרמיאל — דף הבית">
           <Image src="/logo.png" alt="לוגו מדיה נוצ'ה" width={56} height={56} className="object-contain" priority />
@@ -28,7 +28,7 @@ export function Navbar() {
         <ul className="hidden md:flex gap-6 text-base font-bold items-center">
           {NAV_LINKS.map(l => (
             <li key={l.href}>
-              <Link href={l.href} className="hover:text-[#E6007E] transition-colors">
+              <Link href={l.href} className="hover:text-white transition-colors">
                 {l.label}
               </Link>
             </li>
@@ -38,7 +38,7 @@ export function Navbar() {
               href={CATALOG_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-[#FDE003] px-3 py-1.5 rounded-lg text-xs font-bold transition-all"
+              className="bg-transparent border-2 border-black text-black hover:bg-black hover:text-[#01C5C6] px-3 py-1.5 rounded-lg text-xs font-bold transition-all"
             >
               קטלוג צעדים 💃
             </a>
@@ -67,12 +67,12 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#FDE003] text-black font-bold px-4 pb-4">
+        <div className="md:hidden bg-[#01C5C6] text-black font-bold px-4 pb-4">
           {NAV_LINKS.map(l => (
             <Link
               key={l.href}
               href={l.href}
-              className="block py-3 border-b border-black/15 hover:text-[#E6007E] transition-colors"
+              className="block py-3 border-b border-black/15 hover:text-white transition-colors"
               onClick={() => setOpen(false)}
             >
               {l.label}
@@ -82,7 +82,7 @@ export function Navbar() {
             href={CATALOG_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block py-3 text-black font-bold hover:text-[#E6007E] transition-colors"
+            className="block py-3 text-black font-bold hover:text-white transition-colors"
             onClick={() => setOpen(false)}
           >
             קטלוג צעדים 💃

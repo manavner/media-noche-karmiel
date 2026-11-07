@@ -25,8 +25,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <WhatsAppFloatingButton phone={mockSiteSettings.whatsapp} />
-        <FacebookFloatingButton url={mockSiteSettings.facebook} />
+        <div className="social-float">
+          <FacebookFloatingButton url={mockSiteSettings.facebook} />
+          <WhatsAppFloatingButton phone={mockSiteSettings.whatsapp} />
+          <span className="social-float-caption">הצטרפות לקבוצה</span>
+        </div>
         <Analytics />
       </body>
     </html>
