@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { href: '/about',      label: 'אודות'    },
   { href: '/classes',    label: 'שיעורים'  },
   { href: '/curriculum', label: 'סילבוס'   },
-  { href: '/contact',    label: 'צור קשר'  },
 ];
 
 const CATALOG_URL = 'https://salsa-steps-web-kgww.vercel.app/';
