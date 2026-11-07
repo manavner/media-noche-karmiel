@@ -54,7 +54,8 @@ export function HeroBackground() {
       )}
 
       {/* Dark overlay for text legibility */}
-      <div className="absolute inset-0 bg-black/5" />
+      {/* Still photos get a 15% overlay, videos only 5% */}
+      <div className={`absolute inset-0 ${item?.type === 'image' ? 'bg-black/15' : 'bg-black/5'}`} />
     </>
   );
 }
