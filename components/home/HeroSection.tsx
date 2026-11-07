@@ -44,7 +44,7 @@ export function HeroSection() {
             href="https://salsaflow-dj.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-gold text-gold hover:bg-gold hover:text-dark px-8 py-4 rounded-lg font-bold text-lg transition-all"
+            className="bg-white border-2 border-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
             כלים ל DJ 🎧
           </a>
@@ -52,7 +52,7 @@ export function HeroSection() {
             href="https://salsa-steps-web.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-dark-card border-2 border-gold/50 text-white/80 hover:border-gold hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all"
+            className="bg-white border-2 border-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
             קטלוג צעדי סלסה 🎵
           </a>
@@ -64,7 +64,7 @@ export function HeroSection() {
           </Link>
           <Link
             href="/join"
-            className="bg-community border-2 border-community text-white hover:brightness-110 px-8 py-4 rounded-lg font-bold text-lg transition-all"
+            className="bg-white border-2 border-white text-black hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all"
           >
             הצטרפות לקבוצה 🤝
           </Link>
